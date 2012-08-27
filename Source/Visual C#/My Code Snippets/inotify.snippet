@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>INotifyPropertyChanged</Title>
+      <Shortcut>inotify</Shortcut>
+      <Description>Code snippet for implementation of INotifyPropertyChanged.</Description>
+      <Author>Matthew King</Author>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp"><![CDATA[/// <summary>
+/// Occurs when a property value changes.
+/// </summary>
+public event PropertyChangedEventHandler PropertyChanged;
+
+/// <summary>
+/// Raises the PropertyChanged event.
+/// </summary>
+/// <param name="propertyName">The name of the property that changed.</param>
+protected void OnPropertyChanged(string propertyName)
+{
+    PropertyChangedEventHandler handler = this.PropertyChanged;
+    if (handler != null)
+        handler(this, new PropertyChangedEventArgs(propertyName));
+}]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
