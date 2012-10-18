@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>DbProviderFactories (System.Data.SQLite)</Title>
+      <Shortcut>sqlite</Shortcut>
+      <Description>Code snippet to register the System.Data.SQLite DbProviderFactory in App.Config.</Description>
+      <Author>Matthew King</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Code Language="XML"><![CDATA[<system.data>
+    <DbProviderFactories>
+        <remove invariant = "System.Data.SQLite"/>
+        <add name = "SQLite Data Provider"
+            invariant = "System.Data.SQLite"
+            description = ".NET Framework Data Provider for SQLite"
+            type = "System.Data.SQLite.SQLiteFactory, System.Data.SQLite" />
+    </DbProviderFactories>
+</system.data>$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
