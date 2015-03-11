@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Serilog logger</Title>
+      <Shortcut>serilog</Shortcut>
+      <Description>Code snippet for definition of a Serilog logger.</Description>
+      <Author>Matthew King</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="false">
+          <ID>classname</ID>
+          <ToolTip>Class name</ToolTip> 
+          <Function>ClassName()</Function> 
+          <Default>ClassNamePlaceholder</Default> 
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+<![CDATA[/// <summary>
+/// Serilog logger for this class.
+/// </summary>
+private static readonly Serilog.ILogger log = Serilog.Log.ForContext(typeof($classname$));]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
