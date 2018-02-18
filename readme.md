@@ -12,7 +12,7 @@ Installation
 Manual installation
 -------------------
 
-Copy the contents of the `Source` directory to your Visual Studio code snippet directory.
+Copy the contents of the `Snippets` directory to your Visual Studio code snippets directory.
 
 This will generally be: 
 
