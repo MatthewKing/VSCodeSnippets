@@ -1,5 +1,2 @@
-@ECHO OFF
-ECHO Copying files to Visual Studio 2017 code snippet directory...
-XCOPY /S "..\Snippets" "%USERPROFILE%\Documents\Visual Studio 2017\Code Snippets"
-ECHO Done.
-PAUSE
+@echo off
+powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0Install.ps1" 2017
