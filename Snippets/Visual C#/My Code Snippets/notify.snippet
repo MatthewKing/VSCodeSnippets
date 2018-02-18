@@ -2,9 +2,9 @@
 <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>Notify</Title>
+      <Title>Property with INotifyPropertyChanged</Title>
       <Shortcut>notify</Shortcut>
-      <Description>Code snippet for a property that uses NotifyPropertyChanged.</Description>
+      <Description>Code snippet for a property that uses INotifyPropertyChanged.</Description>
       <Author>Matthew King</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -32,13 +32,13 @@
 
 public $type$ $property$ 
 {
-    get { return this.$field$; }
+    get { return $field$; }
     set 
     {
-        if (this.$field$ != value) 
+        if ($field$ != value) 
         {
-            this.$field$ = value;
-            this.OnPropertyChanged("$property$");
+            $field$ = value;
+            OnPropertyChanged(nameof($property$));
         }
     }
 }$end$]]>
