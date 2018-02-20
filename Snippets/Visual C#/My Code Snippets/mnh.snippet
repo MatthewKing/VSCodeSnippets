@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>MediatR notification handler</Title>
+      <Shortcut>mnh</Shortcut>
+      <Description>Code snippet for a MediatR notification handler.</Description>
+      <Author>Matthew King</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>MediatR</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>name</ToolTip>
+          <Default>Name</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[class $name$Notification : INotification
+        {
+
+        }
+
+        class $name$NotificationHandler : INotificationHandler<$name$Notification>
+        {
+            public Task Handle($name$Notification notification, CancellationToken cancellationToken)
+            {
+                throw new NotImplementedException();
+            }
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

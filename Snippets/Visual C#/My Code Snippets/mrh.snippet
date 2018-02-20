@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>MediatR request handler</Title>
+      <Shortcut>mrh</Shortcut>
+      <Description>Code snippet for a MediatR request handler.</Description>
+      <Author>Matthew King</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>MediatR</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>name</ToolTip>
+          <Default>Name</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[class $name$Request : IRequest<$name$Response>
+        {
+
+        }
+
+        class $name$Response
+        {
+
+        }
+
+        class $name$Handler : IRequestHandler<$name$Request, $name$Response>
+        {
+            public Task<$name$Response> Handle($name$Request request, CancellationToken cancellationToken)
+            {
+                throw new NotImplementedException();
+            }
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
