@@ -3,7 +3,7 @@
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>Serilog logger</Title>
-      <Shortcut>log-serilog</Shortcut>
+      <Shortcut>serilog</Shortcut>
       <Description>Code snippet for definition of a Serilog logger.</Description>
       <Author>Matthew King</Author>
     </Header>
@@ -17,10 +17,10 @@
         </Literal>
       </Declarations>
       <Code Language="CSharp">
-<![CDATA[/// <summary>
-/// Serilog logger for this class.
-/// </summary>
-private static readonly Serilog.ILogger log = Serilog.Log.ForContext(typeof($classname$));]]>
+        <![CDATA[/// <summary>
+        /// Serilog logger for this class.
+        /// </summary>
+        private static readonly Serilog.ILogger log = Serilog.Log.ForContext(typeof($classname$));]]>
       </Code>
     </Snippet>
   </CodeSnippet>

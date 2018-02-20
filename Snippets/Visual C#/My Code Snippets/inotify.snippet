@@ -8,19 +8,25 @@
       <Author>Matthew King</Author>
     </Header>
     <Snippet>
-      <Code Language="CSharp"><![CDATA[/// <summary>
-/// Occurs when a property value changes.
-/// </summary>
-public event PropertyChangedEventHandler PropertyChanged;
+      <Imports>
+        <Import>
+          <Namespace>System.ComponentModel</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="CSharp">
+        <![CDATA[/// <summary>
+        /// Occurs when a property value changes.
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
 
-/// <summary>
-/// Raises the <see cref="PropertyChanged"/> event.
-/// </summary>
-/// <param name="propertyName">The name of the property that changed.</param>
-protected void OnPropertyChanged(string propertyName)
-{
-    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName)); 
-}]]>
+        /// <summary>
+        /// Raises the <see cref="PropertyChanged"/> event.
+        /// </summary>
+        /// <param name="propertyName">The name of the property that changed.</param>
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName)); 
+        }]]>
       </Code>
     </Snippet>
   </CodeSnippet>
